@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using Bibliotech.Api.Domain.Entities;
 
 namespace Bibliotech.Api.Controllers;
 
 //ASPNET CORE > FRAMEWORK DA LINGUAGEM C# PARA ESCREVER APLICAÇÕES WEB MVC E WEB API
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/autores")]
 public class AutoresController : ControllerBase
 {
     private List<Autor> autores;
@@ -51,14 +52,7 @@ public class AutoresController : ControllerBase
         };
 
     }
-
-    public class Autor
-    {
-        public string Nome { get; set; }
-        public string Email { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public string Status { get; set; }
-    }
+    
 }
 
 //niveis de acesso
@@ -66,3 +60,5 @@ public class AutoresController : ControllerBase
 //public = todo mundo sabe de tudo
 //private = nunguem tem acesso, somente eu
 //internal = só a galera do grupo
+
+//namespace
