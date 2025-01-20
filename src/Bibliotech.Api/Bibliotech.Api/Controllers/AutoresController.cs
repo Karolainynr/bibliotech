@@ -18,7 +18,9 @@ public class AutoresController : ControllerBase
         autores = GerarAutoresMockados();
     }
 
-    [HttpGet("api/autores")] //NIVEL DE ACESSO   RETORNO        NOME DO METODO (PARAMETROS)
+    [HttpGet("buscar")]
+
+    //[HttpGet("api/autores")] //NIVEL DE ACESSO   RETORNO        NOME DO METODO (PARAMETROS)
     public IActionResult Buscar(string nomeAutor)
     {
         //TODO: acessar o banco de dados e pesquisar pelo autor
@@ -52,8 +54,8 @@ public class AutoresController : ControllerBase
         };
 
     }
-    
 }
+
 
 //niveis de acesso
 //protected = amigo do peito

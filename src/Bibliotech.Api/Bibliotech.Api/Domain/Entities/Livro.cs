@@ -14,4 +14,9 @@ public class Livro : Entity
     public int AssuntoId { get; set; }
 
     public int AutorId { get; set; }
+
+
+    // ORM EF: Propriedades de Navegação
+    public Assunto Assunto { get; set; }
+    public Autor Autor { get; set; }
 }
